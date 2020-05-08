@@ -3,18 +3,18 @@ package com.heyjl;
 /**
  * Created by jalo on 2017/9/22.
  */
-public class CaseObject{
+public class CaseObject {
 
-    private static int sleepTotalTime=0;
+    public final int sevenSecond = 1000 * 7;
+    public final int threeSecond = 1000 * 3;
 
-    public boolean execute(int sleepTime) throws Exception{
-        System.out.println("sleep: "+sleepTime);
-        sleepTotalTime+=sleepTime;
-        Thread.sleep(sleepTime);
-        if(sleepTime%2==0)
-            return true;
-        else
-            return false;
+
+    public int execute(int input) throws Exception {
+        int output = input;
+        System.out.println("sleeptime is threeSecond, pid:" + CaseObjectMain.getProcessID());
+        Thread.sleep(threeSecond);
+        return output;
     }
+
 
 }
